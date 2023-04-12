@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocks</title>
+
+  
+  
+
+  <!-- bootstrap link css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+	<style>
+/* STARTING OF HEADER CSS */
+
+.Headerp1 {
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .nav-bar-1 {
+    display: flex;
+    border-bottom: 1px #cccccc solid;
+    padding: 16px;
+    justify-content: space-around;
+    height: 45px;
+    align-items: center;
+  }
+
+  .dir-con-lists {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .con-lin-dec {
+    float: left;
+    font-weight: 400;
+
+  }
+
+  .links-dr-1 {
+    color: #111827;
+    font-size: 17px;
+    padding: 10px 10px;
+    text-decoration: none
+  }
+
+  #nav-div-2 {
+    display: flex;
+
+  }
+
+  .sec-div-1 {
+    display: flex;
+
+  }
+
+  .dir-con-lists {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link-hl-1 {
+    margin: 10px;
+  }
+
+  #cmp-lgo-img {
+    justify-content: left;
+    margin-right: 450px;
+    color: #7e22ce;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  #navb1 {
+    color: aliceblue;
+    background-color: #7e22ce;
+    font-weight: 600;
+    padding: 4.5px;
+    border-radius: 10px;
+    border: none;
+
+  }
+
+  #navb1:hover {
+    background-color: #582c84;
+  }
+
+  #navb2 {
+    color: aliceblue;
+    background-color: #7e22ce;
+    font-weight: 600;
+    padding: 4.5px;
+    border-radius: 10px;
+    margin-left: 10px;
+    border: none;
+  }
+
+  #navb2:hover {
+    background-color: #582c84;
+  }
+
+  .cnt-hd-1 {
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    color: #7e22ce;
+    font-size: 17px;
+    align-items: center;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    box-shadow: -2px 8px 20px .1px rgb(174, 174, 174);
+    font-weight: 500;
+
+  }
+
+  .srch-div-1 {
+    width: auto;
+    text-align: center;
+  }
+
+  .header {
+    position: fixed;
+  }
+
+  .m-content-div {
+    height: 30rem;
+    display: flex;
+  }
+
+
+  .news-div-new {
+    background-color:white;
+    width: 50%;
+  }
+
+  .nfty-det {
+    background-color: white;
+    width: 50%;
+  }
+
+
+  #srchbr {
+    width: 19rem;
+    height: 1.8rem;
+    border-radius: 10px;
+  }
+
+  .links-dr-1 {
+    margin: 10px;
+  }
+
+  .con-lin-dec :hover {
+    text-decoration: underline;
+  }
+
+  input[type="text"]:focus {
+    border: 2px solid #7e22ce;
+    /* Change this to the highlight color of your choice */
+    outline: none;
+  }
+
+  /* hidden drop-dn-con-1 menu */
+
+  .drop-dn-btn-1 {
+    background-color: #7e22ce;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .drop-dn-con-1 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .drop-dn-con-1-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .drop-dn-con-1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .drop-dn-con-1-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .drop-dn-con-1:hover .drop-dn-con-1-content {
+    display: block;
+  }
+
+  .drop-dn-con-1:hover .drop-dn-btn-1 {
+    background-color: #582c84;
+  }
+
+  /* Responsivness */
+
+  @media screen and (min-width: 320px) and (max-width : 479px) {
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      margin-top: 48px;
+    }
+
+    .cnt-hd-1 {
+      padding: 5px 0px 5px 0px;
+      width: 100%;
+      justify-content: start;
+    }
+
+    .sec-div-1 {
+      display: none;
+      width: 20%;
+    }
+
+    #navb1,
+    #navb2 {
+      display: none;
+    }
+
+
+    #srchbr {
+      width: 8rem;
+      height: 1rem;
+      float: left;
+    }
+
+    .srch-div-1 {
+      padding-left: 9px;
+      width: 7.5rem;
+    }
+
+    #cmp-lgo-img {
+      margin: 0;
+    }
+
+    .navbar2 {
+      float: left;
+      width: 100%;
+    }
+
+    .nav-bar-1 {
+      justify-content: start;
+      text-align: left;
+      width: 100%;
+      padding: 0px;
+    }
+
+    .news-div-new {
+      width: 100%;
+      height: auto;
+    }
+
+    .nfty-det {
+      width: 100%;
+      height: auto;
+    }
+
+    .drop-dn-btn-1 {
+      padding-bottom: 5px;
+    }
+
+    .drop-dn-con-1 {
+      margin-left: 30px;
+      width: 20px;
+    }
+
+    .nav-bar-1 {
+      justify-content: center;
+    }
+
+    .drop-dn-con-1-content {
+      max-width: 20px;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width : 768px) {
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      margin-top: 49px;
+    }
+
+    .cnt-hd-1 {
+      padding: 5px 0px 5px 0px;
+
+      width: 100%;
+    }
+
+    .sec-div-1 {
+      display: none;
+      width: 20%;
+    }
+
+    #navb1,
+    #navb2 {
+      display: none;
+    }
+
+
+    #srchbr {
+      width: 11rem;
+      height: 1.5rem;
+      float: left;
+    }
+
+    .srch-div-1 {
+      width: 8rem;
+    }
+
+    #cmp-lgo-img {
+      margin: 0;
+    }
+
+    .navbar2 {
+      float: left;
+      width: 100%;
+    }
+
+    .nav-bar-1 {
+      justify-content: start;
+      text-align: left;
+      width: 100%;
+      padding: 0px;
+    }
+
+    .news-div-new {
+      width: 100%;
+      height: auto;
+    }
+
+    .nfty-det {
+      width: 100%;
+      height: auto;
+
+    }
+
+    .drop-dn-btn-1 {
+      margin-left: 40px;
+      padding-bottom: 5px;
+    }
+
+    .drop-dn-con-1 {
+      margin-left: 30px;
+      width: 20px;
+    }
+
+    .nav-bar-1 {
+      justify-content: center;
+    }
+
+  }
+
+  @media screen and (min-width: 769px) and (max-width : 959px) {
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .drop-dn-btn-1 {
+      display: none;
+    }
+
+    #cmp-lgo-img {
+      margin-right: 200px;
+    }
+
+    .cnt-hd-1 {
+      width: 100%;
+      padding: 10px 0px 10px 0px;
+    }
+
+  }
+
+  @media screen and (min-width: 960px) and (max-width : 1023px) {
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .drop-dn-btn-1 {
+      display: none;
+    }
+
+    #cmp-lgo-img {
+      margin-right: 300px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+
+    .m-content-div {
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .drop-dn-btn-1 {
+      display: none;
+    }
+
+    #cmp-lgo-img {
+      margin-right: 387px;
+    }
+  }
+
+
+/* Ending of Header css */
+
+
+	
+
+
+  </style>
+
+</head>
+
+<body>
+
+
+<!-- CODE FOR HEADER  -->
+
+  <header class="Headerp1">
+
+    <!-- Top navigation bar -->
+
+    <div class="nav-bar-1">
+      <div id="cmp-lgo-img">
+        <span class="cmp-nm">
+          Company Name
+        </span>
+      </div>
+
+      <!-- Navigation bar Contact Details -->
+
+      <div class="sec-div-1">
+
+        <ul class="dir-con-lists">
+          <li class="con-lin-dec"> <a href="#" class="links-dr-1">Contact Us</a></li>
+          <li class="con-lin-dec"> <a href="#" class="links-dr-1">Work with Us</a></li>
+        </ul>
+
+
+      </div>
+
+      <!-- Login Signup Button -->
+
+      <div class="navdiv">
+        <button id="navb1">Login</button>
+        <button id="navb2">Signup</button>
+      </div>
+    </div>
+
+    <!-- srch-div-1 box second navigation bar -->
+
+    <div class="navbar2">
+      <div class="cnt-hd-1">
+        <div class="srch-div-1">
+          <input type="text" name="srch-div-1" id="srchbr">
+        </div>
+
+        <!-- hidden drop down menu -->
+
+        <div class="drop-dn-con-1">
+          <button class="drop-dn-btn-1">More</button>
+          <div class="drop-dn-con-1-content">
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Work with Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "in"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+   
+  
+
+
+  
+
+
+<!-- STARTING OF STOCK DATA -->
+<div class="card table1 border border-dark">
+
+
+  <table id="forex" class="">
+    <thead class="p-3 text-center border-bottom ">
+      <tr>
+        <th width="11%" class="p-4">Name</th>
+        <th scope="col" class="">Prev Close</th>
+        <th scope="col" class="">Open</th>
+        <th scope="col" class="">High</th>
+        <th scope="col" class="">Low</th>
+        <th scope="col" class="">VWAP</th>
+        <th scope="col" class="">Volume</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <!-- <tr>
+        <td class="text-primary border border-0 p-3">Stocks</td>
+      </tr> -->
+      <tr>
+        <td class="p-3">
+          <%=data[0].Symbol %>
+        </td>
+        <td class="">
+          <%=data[0].Last%>
+        </td>
+        <td class="">
+          <%=data[0].Open%>
+        </td>
+        <td class="">
+          <%=data[0].High%>
+        </td>
+        <td class="">
+          <%=data[0].Low%>
+        </td>
+        <td class="">
+          <%=data[0].VWAP%>
+        </td>
+        <td class="">
+          <%=data[0].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[2784].Symbol %>
+        </td>
+        <td class="">
+          <%=data[2784].Last%>
+        </td>
+        <td class="">
+          <%=data[2784].Open%>
+        </td>
+        <td class="">
+          <%=data[2784].High%>
+        </td>
+        <td class="">
+          <%=data[2784].Low%>
+        </td>
+        <td class="">
+          <%=data[2784].VWAP%>
+        </td>
+        <td class="">
+          <%=data[2784].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[3992].Symbol %>
+        </td>
+        <td class="">
+          <%=data[3992].Last%>
+        </td>
+        <td class="">
+          <%=data[3992].Open%>
+        </td>
+        <td class="">
+          <%=data[3992].High%>
+        </td>
+        <td class="">
+          <%=data[3992].Low%>
+        </td>
+        <td class="">
+          <%=data[3992].VWAP%>
+        </td>
+        <td class="">
+          <%=data[3992].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[4855].Symbol %>
+        </td>
+        <td class="">
+          <%=data[4855].Last%>
+        </td>
+        <td class="">
+          <%=data[4855].Open%>
+        </td>
+        <td class="">
+          <%=data[4855].High%>
+        </td>
+        <td class="">
+          <%=data[4855].Low%>
+        </td>
+        <td class="">
+          <%=data[4855].VWAP%>
+        </td>
+        <td class="">
+          <%=data[4855].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[7637].Symbol %>
+        </td>
+        <td class="">
+          <%=data[7637].Last%>
+        </td>
+        <td class="">
+          <%=data[7637].Open%>
+        </td>
+        <td class="">
+          <%=data[7637].High%>
+        </td>
+        <td class="">
+          <%=data[7637].Low%>
+        </td>
+        <td class="">
+          <%=data[7637].VWAP%>
+        </td>
+        <td class="">
+          <%=data[7637].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[9475].Symbol %>
+        </td>
+        <td class="">
+          <%=data[9475].Last%>
+        </td>
+        <td class="">
+          <%=data[9475].Open%>
+        </td>
+        <td class="">
+          <%=data[9475].High%>
+        </td>
+        <td class="">
+          <%=data[9475].Low%>
+        </td>
+        <td class="">
+          <%=data[9475].VWAP%>
+        </td>
+        <td class="">
+          <%=data[9475].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[10692].Symbol %>
+        </td>
+        <td class="">
+          <%=data[10692].Last%>
+        </td>
+        <td class="">
+          <%=data[10692].Open%>
+        </td>
+        <td class="">
+          <%=data[10692].High%>
+        </td>
+        <td class="">
+          <%=data[10692].Low%>
+        </td>
+        <td class="">
+          <%=data[10692].VWAP%>
+        </td>
+        <td class="">
+          <%=data[10692].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[13243].Symbol %>
+        </td>
+        <td class="">
+          <%=data[13243].Last%>
+        </td>
+        <td class="">
+          <%=data[13243].Open%>
+        </td>
+        <td class="">
+          <%=data[13243].High%>
+        </td>
+        <td class="">
+          <%=data[13243].Low%>
+        </td>
+        <td class="">
+          <%=data[13243].VWAP%>
+        </td>
+        <td class="">
+          <%=data[13243].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[15809].Symbol %>
+        </td>
+        <td class="">
+          <%=data[15809].Last%>
+        </td>
+        <td class="">
+          <%=data[15809].Open%>
+        </td>
+        <td class="">
+          <%=data[15809].High%>
+        </td>
+        <td class="">
+          <%=data[15809].Low%>
+        </td>
+        <td class="">
+          <%=data[15809].VWAP%>
+        </td>
+        <td class="">
+          <%=data[15809].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[15890].Symbol %>
+        </td>
+        <td class="">
+          <%=data[15890].Last%>
+        </td>
+        <td class="">
+          <%=data[15890].Open%>
+        </td>
+        <td class="">
+          <%=data[15890].High%>
+        </td>
+        <td class="">
+          <%=data[15890].Low%>
+        </td>
+        <td class="">
+          <%=data[15890].VWAP%>
+        </td>
+        <td class="">
+          <%=data[15890].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[16421].Symbol %>
+        </td>
+        <td class="">
+          <%=data[16421].Last%>
+        </td>
+        <td class="">
+          <%=data[16421].Open%>
+        </td>
+        <td class="">
+          <%=data[16421].High%>
+        </td>
+        <td class="">
+          <%=data[16421].Low%>
+        </td>
+        <td class="">
+          <%=data[16421].VWAP%>
+        </td>
+        <td class="">
+          <%=data[16421].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[16826].Symbol %>
+        </td>
+        <td class="">
+          <%=data[16826].Last%>
+        </td>
+        <td class="">
+          <%=data[16826].Open%>
+        </td>
+        <td class="">
+          <%=data[16826].High%>
+        </td>
+        <td class="">
+          <%=data[16826].Low%>
+        </td>
+        <td class="">
+          <%=data[16826].VWAP%>
+        </td>
+        <td class="">
+          <%=data[16826].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[17316].Symbol %>
+        </td>
+        <td class="">
+          <%=data[17316].Last%>
+        </td>
+        <td class="">
+          <%=data[17316].Open%>
+        </td>
+        <td class="">
+          <%=data[17316].High%>
+        </td>
+        <td class="">
+          <%=data[17316].Low%>
+        </td>
+        <td class="">
+          <%=data[17316].VWAP%>
+        </td>
+        <td class="">
+          <%=data[17316].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[20036].Symbol %>
+        </td>
+        <td class="">
+          <%=data[20036].Last%>
+        </td>
+        <td class="">
+          <%=data[20036].Open%>
+        </td>
+        <td class="">
+          <%=data[20036].High%>
+        </td>
+        <td class="">
+          <%=data[20036].Low%>
+        </td>
+        <td class="">
+          <%=data[20036].VWAP%>
+        </td>
+        <td class="">
+          <%=data[20036].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[22809].Symbol %>
+        </td>
+        <td class="">
+          <%=data[22809].Last%>
+        </td>
+        <td class="">
+          <%=data[22809].Open%>
+        </td>
+        <td class="">
+          <%=data[22809].High%>
+        </td>
+        <td class="">
+          <%=data[22809].Low%>
+        </td>
+        <td class="">
+          <%=data[22809].VWAP%>
+        </td>
+        <td class="">
+          <%=data[22809].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[23414].Symbol %>
+        </td>
+        <td class="">
+          <%=data[23414].Last%>
+        </td>
+        <td class="">
+          <%=data[23414].Open%>
+        </td>
+        <td class="">
+          <%=data[23414].High%>
+        </td>
+        <td class="">
+          <%=data[23414].Low%>
+        </td>
+        <td class="">
+          <%=data[23414].VWAP%>
+        </td>
+        <td class="">
+          <%=data[23414].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[27722].Symbol %>
+        </td>
+        <td class="">
+          <%=data[27722].Last%>
+        </td>
+        <td class="">
+          <%=data[27722].Open%>
+        </td>
+        <td class="">
+          <%=data[27722].High%>
+        </td>
+        <td class="">
+          <%=data[27722].Low%>
+        </td>
+        <td class="">
+          <%=data[27722].VWAP%>
+        </td>
+        <td class="">
+          <%=data[27722].Volume%>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-3">
+          <%=data[30495].Symbol %>
+        </td>
+        <td class="">
+          <%=data[30495].Last%>
+        </td>
+        <td class="">
+          <%=data[30495].Open%>
+        </td>
+        <td class="">
+          <%=data[30495].High%>
+        </td>
+        <td class="">
+          <%=data[30495].Low%>
+        </td>
+        <td class="">
+          <%=data[30495].VWAP%>
+        </td>
+        <td class="">
+          <%=data[30495].Volume%>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<div class="container"></div>
+<!-- ENDING OF STOCK -->
+ <!-- NEWS Widget BEGIN -->
+ <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/stocks-india/key-events/" rel="noopener" target="_blank"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+  {
+  "feedMode": "market",
+  "market": "stock",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "width": "480",
+  "height": "830"
+  "locale": "in"
+}
+  </script>
+</div>
+<!-- NEWS Widget END -->n
+
+
+
+  </section>
+
+  <!-- bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=RELIANCE.BSE&outputsize=full&apikey=MUVG2COHDX3CW6HQ").then((res) => {
+    //   return res.json();
+    // }).then((data) => {
+    //   console.log(data)
+    //   const name = data.;
+    //   console.log(name)
+    // }).catch((err)=>{
+    //   console.log(err)
+    // })
+      const axisFund = fetch("https://api.mfapi.in/mf/125354") //2285
+      const tataFund = fetch("https://api.mfapi.in/mf/100416") //2790
+      const hdfcFund = fetch("https://api.mfapi.in/mf/102145") //2942
+      const landtFund = fetch("https://api.mfapi.in/mf/119417") //2435
+      const sbiFund = fetch("https://api.mfapi.in/mf/119827") //2514
+      const quantFund = fetch("https://api.mfapi.in/mf/100172") //3656
+      const licFund = fetch("https://api.mfapi.in/mf/101202") //2262
+      const idfcFund = fetch("https://api.mfapi.in/mf/118421") //2514
+      const taurusFund = fetch("https://api.mfapi.in/mf/118881") //2517
+
+      
+    // .then((res)=>{
+    //   return res.json();
+
+    // }).then((data)=>{
+    //   console.log(data)
+    //   document.getElementById("mutual_fund1").innerHTML = data.meta.fund_house;
+    // })
+    Promise.all([axisFund, tataFund, hdfcFund, landtFund, sbiFund, quantFund, licFund, idfcFund, taurusFund]).then((res)=>{
+      return Promise.all(res.map(val => val.json()));
+    }).then((data)=>[
+      console.log(data),
+      
+      document.getElementById("mutual_fund1").innerHTML = data[0].meta.fund_house,
+      document.getElementById("mutual_fund2").innerHTML = data[1].meta.fund_house,
+      document.getElementById("mutual_fund3").innerHTML = data[2].meta.fund_house,
+      document.getElementById("mutual_fund4").innerHTML = data[3].meta.fund_house,
+      document.getElementById("mutual_fund5").innerHTML = data[4].meta.fund_house,
+      document.getElementById("mutual_fund6").innerHTML = data[5].meta.fund_house,
+      document.getElementById("mutual_fund7").innerHTML = data[6].meta.fund_house,
+      document.getElementById("mutual_fund8").innerHTML = data[7].meta.fund_house,
+      document.getElementById("mutual_fund9").innerHTML = data[8].meta.fund_house,
+
+      // document.getElementById("axis-5yr").innerHTML = 
+      
+    ]).catch((err)=>{
+      console.log(err)
+    })
+  </script>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
+
+<!-- mutualFund api -->
+<!-- https://www.mfapi.in/ -->
