@@ -691,7 +691,7 @@
         <script src="index.js"></script>
 
 <?php 
-include('/xampp/htdocs/Stock_market/Footer/index.php')
+include('footer.php')
 ?>
 
 

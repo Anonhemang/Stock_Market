@@ -72,7 +72,7 @@
         <input type="submit" value="Go">
     </div>
 
-    <div class="w-auto overflow-scroll h-auto d-flex " id="sh">
+    <div class="w-auto overflow-scroll d-flex " style="overflow-x: scroll; height:500px;" id="sh">
 
         <?php
         error_reporting('0');
